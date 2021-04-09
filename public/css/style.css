@@ -1,0 +1,27 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: lightseagreen;
+    color: bisque;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1.5em;
+    padding: 0.6em 1.5em;
+}
+h1 {
+    font-size: 2em;
+}
+.lien li{
+    font-size: 1.8em;
+    margin: auto;
+    padding: 10px;
+    
+}
+.img {
+    display: flex;
+    align-self: center;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}

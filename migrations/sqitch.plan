@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=pokemon
+
+init 2021-04-07T12:09:49Z Audrey Alexandre <audykei7907@gmail.com> # create table
+data 2021-04-07T12:24:37Z Audrey Alexandre <audykei7907@gmail.com> # insert data

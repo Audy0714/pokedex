@@ -3,6 +3,7 @@
 ## Project
 
 Site regroupant tous les Pokemons
+Challenge fait en exercice lors de la formation O'Clock (en Boostrap) refait en EJS/CSS 
 
 ## Stack
 -Node 10+
@@ -10,7 +11,8 @@ Site regroupant tous les Pokemons
 -express
 -pg
 -ejs for HTML
--postgresql
+-CSS
+-postgres
 -dataMapper
 -JSDOC
 -sqitch
@@ -21,12 +23,8 @@ for BDD :
 sqitch init pokemon --engine pg
 sqitch config --user engine.pg.client psql
 createdb pokemon
-sqitch deploy (target heroku for sqitch deploy)
+sqitch deploy db:pg:pokemon
 sqitch revert db:pg:pokemon
 sqitch verify db:pg:pokemon
 
 npm start for node index.js
-
-### Deployment method
-
-https://pokemon.herokuapp.com/v1

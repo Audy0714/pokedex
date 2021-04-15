@@ -13,13 +13,7 @@ app.set('views','app/views');
 
 app.use(express.static('public'));
 
-app.locals.pageTitle = `PokeDex`;
-app.locals.pageDescription = `Attrapez les tous !`;
-
-
 app.use(router);
-
-// ici, on pourrait aussi écrire notre 404
 
 app.listen(PORT, () => { 
    console.info(`Server listening on port ${PORT}`)

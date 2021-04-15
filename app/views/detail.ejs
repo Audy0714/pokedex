@@ -1,72 +1,94 @@
-<%- include('partials/header')  %>
-    <div class="pokemon">
-        <div>
-            <h2 class="title">Détails de <%=name%></h2>
-        </div>
-        <div>
-            <div class="presentation">
-                <img class="shadow" src="/img/<%=numero%>.png">
-            </div>
-            <div>
-                <h3 class="title-type">#<%=numero%> <%=name%></h3>
-                <ul class="container-type">
-                    <% for(const type of typeList) { %>
-                    <li class="type"><a href="/type/<%=type.id%>"
-                            style="background-color: #<%=type.color%>"><%=type.name%></a></li>
-                    <% } %>
-                </ul>
-                <h4 class="title-type">Statistiques</h4>
-                <div class="statistiques">
-                    <div class="ligne">
-                        <div class="stats-ligne">PV</div>
-                            <div class="stats-ligne"><%=pv%></div>
-                            <div class="stats-ligne">
-                                <div class="status-barre"><span 
-                                        style="width:<%=(pv/255)*250%>%"></span></div>
-                            </div>
-                    </div>
-                    <div class="ligne">
-                        <div class="stats-ligne">Attaque</div>
-                            <div class="stats-ligne"><%=attaque%></div>
-                            <div class="stats-ligne">
-                                <div class="status-barre"><span
-                                        style="width:<%=(attaque/255)*250%>%"></span></div>
-                            </div>
-                    </div>
-                    <div class="ligne">
+<%- include('partials/header') %>
+<div class="pokemon">
+	<div>
+		<h2 class="title">Détails de <%=name%></h2>
+	</div>
+	<div>
+		<div class="presentation">
+			<img class="shadow" src="/img/<%=numero%>.png" />
+		</div>
+		<div>
+			<h3 class="title-type">#<%=numero%> <%=name%></h3>
+			<ul class="container-type">
+				<% for(const type of typeList) { %>
+				<li class="type">
+					<a
+						href="/type/<%=type.id%>"
+						style="background-color: #<%=type.color%>"
+						><%=type.name%></a
+					>
+				</li>
+				<% } %>
+			</ul>
+			<h4 class="title-type">Statistiques</h4>
+			<div class="statistiques">
+				<div class="ligne">
+					<div class="flex">
+						<div class="stats-ligne">PV</div>
+						<div class="stats-ligne"><%=pv%></div>
+					</div>
+					<div class="stats-ligne">
+						<div class="status-barre">
+							<span style="width: <%=(pv/255) * 250%>%"></span>
+						</div>
+					</div>
+				</div>
+				<div class="ligne">
+					<div class="flex">
+						<div class="stats-ligne">Attaque</div>
+						<div class="stats-ligne"><%=attaque%></div>
+					</div>
+					<div class="stats-ligne">
+						<div class="status-barre">
+							<span style="width: <%=(attaque/255) * 250%>%"></span>
+						</div>
+					</div>
+				</div>
+				<div class="ligne">
+					<div class="flex">
                         <div class="stats-ligne">Défense</div>
-                            <div class="stats-ligne"><%=defense%></div>
-                            <div class="stats-ligne">
-                                <div class="status-barre"><span
-                                        style="width:<%=(defense/255)*250%>%"></span></div>
-                            </div>
+                        <div class="stats-ligne"><%=defense%></div>
                     </div>
-                    <div class="ligne">
+					<div class="stats-ligne">
+						<div class="status-barre">
+							<span style="width: <%=(defense/255) * 250%>%"></span>
+						</div>
+					</div>
+				</div>
+				<div class="ligne">
+					<div class="flex">
                         <div class="stats-ligne">Attaque Spé.</div>
-                            <div class="stats-ligne"><%=attaque_spe%></div>
-                            <div class="stats-ligne">
-                                <div class="status-barre"><span
-                                        style="width:<%=(attaque_spe/255)*250%>%"></span></div>
-                            </div>
+                        <div class="stats-ligne"><%=attaque_spe%></div>
                     </div>
-                    <div class="ligne">
+					<div class="stats-ligne">
+						<div class="status-barre">
+							<span style="width: <%=(attaque_spe/255) * 250%>%"></span>
+						</div>
+					</div>
+				</div>
+				<div class="ligne">
+					<div class="flex">
                         <div class="stats-ligne">Défense Spé.</div>
-                            <div class="stats-ligne"><%=defense_spe%></div>
-                            <div class="stats-ligne">
-                                <div class="status-barre"><span
-                                        style="width:<%=(defense_spe/255)*250%>%"></span></div>
-                            </div>
+                        <div class="stats-ligne"><%=defense_spe%></div>
                     </div>
-                    <div class="ligne">
+					<div class="stats-ligne">
+						<div class="status-barre">
+							<span style="width: <%=(defense_spe/255) * 250%>%"></span>
+						</div>
+					</div>
+				</div>
+				<div class="ligne">
+					<div class="flex">
                         <div class="stats-ligne">Vitesse</div>
-                            <div class="stats-ligne"><%=vitesse%></div>
-                            <div class="stats-ligne">
-                                <div class="status-barre"><span
-                                        style="width:<%=(vitesse/255)*250%>%"></span></div>
-                            </div>
+                        <div class="stats-ligne"><%=vitesse%></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+					<div class="stats-ligne">
+						<div class="status-barre">
+							<span style="width: <%=(vitesse/255) * 250%>%"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

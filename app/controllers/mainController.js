@@ -4,36 +4,21 @@ const mainController = {
     // router /
     homePage: (request, response) => {
 
-         response.render('header');
+        response.render('homePage');
+    },
 
-        //console.debug('mainController homePage');
-         
-        /*dataMapper.getAllPokemons((error, result) => {
-            if (!!error) {
-                response.status(500).send(error);
-                //console.trace(error);
-                return;
-            }
-
-            
-        });*/
-
-       
-
-    }, 
-
-    /*allPokemonPage: (request, response) => {
+    allPokemonsPage: (request, response) => {
         dataMapper.getAllPokemons((error, result) => {
             if (!!error) {
                 response.status(500).send(error);
-                //console.trace(error);
+                
                 return;
             }
-        //response.render('list', { pokemonList: result.rows });
-        
+            response.render('list', { pokemonList: result.rows });
+        });
     },
 
-    /*pokemonPage: (request, response, next) => {
+    pokemonPage: (request, response, next) => {
 
         //console.debug('mainController pokemonPage', request.params);
 
@@ -62,12 +47,12 @@ const mainController = {
                     color: type.color
                 })
             }
-            response.render('header');
-            //response.render('detail', pokemon);
+            
+            response.render('detail', pokemon);
         });
     },
 
-    /*typePage: (request, response) => {
+    typePage: (request, response) => {
 
         dataMapper.getAllTypes((error, result) => {
             if (!!error) {
@@ -79,11 +64,32 @@ const mainController = {
              response.render('type', { typeList: result.rows });
 
         });
-    },*/
+    },
+    pokemonTypePage: (request, response, next) => {
+        //console.debug('mainController pokemonTypePage', request.params);
+
+        const {id} = request.params;
+
+        dataMapper.getOneType(id, (error, result) => {
+            if (!!error) {
+                response.status(500).send(error);
+                //console.trace(error);
+                return;
+            }
+
+            if (!result.rows) {
+                next();
+                return;
+            }
+
+            response.render('list', { pokemonList: result.rows });
+            
+        });
+    },
 
     notFound: (request, response) => {
         console.debug('mainController notFound');
-
+       
         response.status(404).render('error', { error: 404, message: 'Page not found' });
     }
 };

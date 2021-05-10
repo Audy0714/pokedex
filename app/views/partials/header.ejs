@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokédex</title>
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1><a href="/">Pokédex</a></h1>
+
+			<form action="/request/search" method="GET">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for pokemon"
+              class="search-btn"
+            />
+            <button class="btn-right-fleche" type="submit">Submit</button>
+        <div class="imae"></div>
+      </form>
+			<nav>
+				<ul class="lien">
+					<li><a href="/pokemon">Liste des Pokémon</a></li>
+					<li><a href="/type">Liste des Types</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>

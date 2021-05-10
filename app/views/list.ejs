@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+<div class="container">
+	<% for(const pokemon of pokemonList) { %>
+
+	<a href="/pokemon/<%=pokemon.id%>">
+		<figure class="card">
+			<img src="/img/<%=pokemon.numero%>.png" />
+			<figcaption>#<%=pokemon.numero%> <%=pokemon.name%></figcaption>
+		</figure>
+	</a>
+
+	<% } %>
+</div>
+<%- include('partials/footer') %>

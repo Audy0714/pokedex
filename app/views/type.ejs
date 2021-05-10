@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<ul class="container-types types-list">
+	<% for(const type of typeList) { %>
+	<li class="types">
+		<a href="/type/<%=type.id%>" style="background-color: #<%=type.color%>"
+			><%=type.name%>
+		</a>
+	</li>
+	<% } %>
+</ul>
+
+<%- include('partials/footer') %>

@@ -6,6 +6,8 @@ const mainController = require('./controllers/mainController');
 
 router.get('/', mainController.homePage);
 
+router.get('/request/search?', mainController.searchPokemon);
+
 router.get('/pokemon', mainController.allPokemonsPage);
 
 router.get('/pokemon/:id', mainController.pokemonPage);

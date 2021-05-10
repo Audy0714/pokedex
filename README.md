@@ -3,14 +3,15 @@
 ## Project
 
 Site regroupant tous les Pokemons
-Challenge fait en exercice lors de la formation O'Clock (en Boostrap) refait en EJS/CSS 
+Challenge fait en exercice lors de la formation O'Clock (en Boostrap) refait en EJS/CSS
 
 ## Stack
+
 -Node 10+
 -dotenv
 -express
 -pg
--ejs for HTML
+-ejs for HTML dynamic
 -CSS
 -postgres
 -dataMapper
@@ -18,6 +19,7 @@ Challenge fait en exercice lors de la formation O'Clock (en Boostrap) refait en 
 -sqitch
 
 ## Configuration
+
 npm init -y for install dependencies
 for BDD :
 sqitch init pokemon --engine pg

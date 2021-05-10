@@ -13,9 +13,9 @@
 				<% for(const type of typeList) { %>
 				<li class="type">
 					<a
-						href="/type/<%=type.id%>"
+						href="/type/<%=type_id%>"
 						style="background-color: #<%=type.color%>"
-						><%=type.name%></a
+						><%=type_name%></a
 					>
 				</li>
 				<% } %>
@@ -46,9 +46,9 @@
 				</div>
 				<div class="ligne">
 					<div class="flex">
-                        <div class="stats-ligne">Défense</div>
-                        <div class="stats-ligne"><%=defense%></div>
-                    </div>
+						<div class="stats-ligne">Défense</div>
+						<div class="stats-ligne"><%=defense%></div>
+					</div>
 					<div class="stats-ligne">
 						<div class="status-barre">
 							<span style="width: <%=(defense/255) * 250%>%"></span>
@@ -57,9 +57,9 @@
 				</div>
 				<div class="ligne">
 					<div class="flex">
-                        <div class="stats-ligne">Attaque Spé.</div>
-                        <div class="stats-ligne"><%=attaque_spe%></div>
-                    </div>
+						<div class="stats-ligne">Attaque Spé.</div>
+						<div class="stats-ligne"><%=attaque_spe%></div>
+					</div>
 					<div class="stats-ligne">
 						<div class="status-barre">
 							<span style="width: <%=(attaque_spe/255) * 250%>%"></span>
@@ -68,9 +68,9 @@
 				</div>
 				<div class="ligne">
 					<div class="flex">
-                        <div class="stats-ligne">Défense Spé.</div>
-                        <div class="stats-ligne"><%=defense_spe%></div>
-                    </div>
+						<div class="stats-ligne">Défense Spé.</div>
+						<div class="stats-ligne"><%=defense_spe%></div>
+					</div>
 					<div class="stats-ligne">
 						<div class="status-barre">
 							<span style="width: <%=(defense_spe/255) * 250%>%"></span>
@@ -79,9 +79,9 @@
 				</div>
 				<div class="ligne">
 					<div class="flex">
-                        <div class="stats-ligne">Vitesse</div>
-                        <div class="stats-ligne"><%=vitesse%></div>
-                    </div>
+						<div class="stats-ligne">Vitesse</div>
+						<div class="stats-ligne"><%=vitesse%></div>
+					</div>
 					<div class="stats-ligne">
 						<div class="status-barre">
 							<span style="width: <%=(vitesse/255) * 250%>%"></span>

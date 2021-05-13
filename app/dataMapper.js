@@ -13,7 +13,7 @@ const dataMapper = {
 
 	getOnePokemon: (id, callback) => {
 		const query = {
-			text: `SELECT pokemon.*, "type".id AS type_id, "type".name AS type_name, "type".color 
+			text: `SELECT pokemon.*, "type".id AS "type_id", "type".name AS "type_name", "type".color 
                     FROM pokemon 
                     JOIN pokemon_type ON pokemon_type."pokemon_numero" = pokemon.numero
                     JOIN "type" ON "type".id = pokemon_type."type_id"
@@ -38,12 +38,15 @@ const dataMapper = {
 
 	getOneType: (id, callback) => {
 		const query = {
-			text: `SELECT pokemon.*
-					FROM pokemon
-					JOIN pokemon_type ON pokemon_type.pokemon_numero = pokemon.numero
-					JOIN "type" ON "type".id = pokemon_type.type_id
-					WHERE "type".id = $1`,
+			text: `SELECT 
+            pokemon.*
+            FROM pokemon
+            JOIN pokemon_type ON pokemon_type.pokemon_numero = pokemon.numero
+            JOIN "type" ON "type".id = pokemon_type.type_id
+            WHERE pokemon_type.type_id = $1
+    		`,
 			values: [id],
+			
 		};
 
 		db.query(query, (error, result) => {

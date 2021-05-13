@@ -10,24 +10,11 @@ header {
 	padding: 0.6em 1.5em;
 }
 header h1 {
-	font-size: 2em;
+	font-size: 2.5em;
 	margin: 20px;
-}
-header a {
 	color: beige;
 }
 
-#search .search-btn {
-	display: flex;
-	justify-content: center;
-	width: 300px;
-	height: 30px;
-	margin: 20px;
-}
-#search .btn-right-fleche {
-	width: 30px;
-	height: 30px;
-}
 .lien li {
 	font-size: 1.8em;
 	margin: auto;
@@ -40,6 +27,21 @@ footer {
 	display: flex;
 	justify-content: center;
 }
+/*Form Search*/
+form {
+	display: flex;
+	justify-content: center;
+}
+.search-btn {
+	width: 200px;
+	height: 30px;
+	margin: 20px 10px;
+}
+.btn-right-fleche {
+	width: 60px;
+	height: 30px;
+	margin: 20px 10px;
+}
 /*Pokeball*/
 .img {
 	margin: 50px;
@@ -50,7 +52,9 @@ footer {
 /*Error page*/
 .error {
 	display: flex;
-	align-items: center;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
 }
 .error-msg {
 	align-items: center;

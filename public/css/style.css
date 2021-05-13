@@ -14,7 +14,6 @@ header h1 {
 	margin: 20px;
 	color: beige;
 }
-
 .lien li {
 	font-size: 1.8em;
 	margin: auto;
@@ -52,9 +51,9 @@ form {
 /*Error page*/
 .error {
 	display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
+	align-items: center;
+	margin: auto;
+	justify-content: center;
 }
 .error-msg {
 	align-items: center;
@@ -89,11 +88,9 @@ form {
 	color: slategrey;
 	text-align: center;
 }
-
 .container img {
 	width: 80%;
 }
-
 /*Details pokemon*/
 .pokemon {
 	display: flex;
@@ -169,7 +166,6 @@ form {
 .types-list {
 	margin: 40px;
 	font-size: 1.5rem;
-	/*box-sizing: border-box;*/
 }
 .types {
 	flex-wrap: wrap;

@@ -38,6 +38,11 @@ const mainController = {
 					color: type.color,
 				});
 			}
+			// pour pouvoir afficher correctement les différentes types du pokemon, on doit delete d'abord sinon affiche le même type s'il y en a deux !!!
+			delete pokemon.type_id;
+            delete pokemon.type_name, pokemon.color;
+            delete pokemon.color;
+         
 			response.render('detail', pokemon);
 		});
 	},

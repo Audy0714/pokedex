@@ -1,4 +1,4 @@
-# pokedex
+# Pokedex
 
 ## Project
 
@@ -13,7 +13,7 @@ Challenge fait en exercice lors de la formation O'Clock (en Boostrap) refait en 
 -pg
 -ejs for HTML dynamic
 -CSS
--postgres
+-postgresql
 -dataMapper
 -JSDOC
 -sqitch

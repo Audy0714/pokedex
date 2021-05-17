@@ -1,6 +1,6 @@
 const db = require('./database');
 
-// ORM : dataMapper pour gérer les requêtes SQL à la BDD
+// dataMapper pour gérer les requêtes SQL à la BDD
 const dataMapper = {
 	/**
 	 * Fonction pour afficher tous les pokemons
